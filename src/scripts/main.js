@@ -8,8 +8,8 @@ document.addEventListener('click', (e) => {
     const maxHeight = wall.clientHeight - spider.clientHeight;
     const maxWidth = wall.clientWidth - spider.clientWidth;
 
-    let width = e.offsetX - spider.clientWidth / 2;
-    let height = e.offsetY - spider.clientHeight / 2;
+    let width = e.clientX - wall.offsetLeft - spider.clientWidth / 2;
+    let height = e.clientY - wall.offsetTop - spider.clientHeight / 2;
 
     if (width > maxWidth) {
       width = maxWidth;
